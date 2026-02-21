@@ -14,6 +14,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (_, res)=>{
+    res.send("THIS IS AN EXPRESS SERVER FOR NOTES WEB APP.")
+})
 app.use("/auth", authRouter);
 app.use("/notes", noteRouter);
 
