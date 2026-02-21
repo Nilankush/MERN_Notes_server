@@ -22,4 +22,7 @@ app.use("/notes", noteRouter);
 
 connectDb();
 
-export default app;
+app.listen(PORT, ()=>{
+    console.log(`server is listening at port: ${PORT}`);
+    
+});
